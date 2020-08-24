@@ -329,15 +329,7 @@ class Mailform {
 		
 		$send_address_all = implode( ',', $this->send_address );
 		
-		
-		if ( $this->reply_mail_address === true ) {
-			$additional_headers = "From: ".$this->mail_address;
-		} else {
-			$additional_headers = "From: ".$this->send_address[0];
-		}
-		
-		$this->my_result = mb_send_mail( $send_address_all, $this->send_subject, $this->send_body, $additional_headers );
-		
+		$this->my_result = mb_send_mail( $send_address_all, $this->send_subject, $this->send_body);
 		
 		if ( $this->reply_mail === 1 ) {
 			
