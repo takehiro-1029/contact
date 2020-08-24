@@ -30,7 +30,6 @@ $responsive_mailform->post_check( 'default' );
 
 
 $responsive_mailform->mail_set( 'send' );
-$responsive_mailform->mail_set( 'thanks' );
 
 
 $responsive_mailform->mail_send();

@@ -304,15 +304,7 @@ class Mailform {
 			$set_body .= '【メールフォームのページの直前に見たURL】'.PHP_EOL;
 			$set_body .= $this->before_url.''.PHP_EOL;
 			$set_body .= PHP_EOL;
-			
-			if ( file_exists( dirname( __FILE__ ) .'/../addon/writing-time/writing-ok.php' ) ) {
-				include( dirname( __FILE__ ) .'/../addon/writing-time/writing-ok.php' );
-			}
-			
-			if ( file_exists( dirname( __FILE__ ) .'/../addon/token/token-ok.php' ) ) {
-				include( dirname( __FILE__ ) .'/../addon/token/token-ok.php' );
-			}
-			
+						
 		} else {
 			
 			$set_body .= PHP_EOL;
@@ -325,14 +317,8 @@ class Mailform {
 		
 		if ( $set === 'send' ) {
 			$this->send_body   .= $set_body;
-		} else {
-			
-			if ( file_exists( dirname( __FILE__ ) .'/../addon/dear-name/dear-set.php' ) ) {
-				include( dirname( __FILE__ ) .'/../addon/dear-name/dear-set.php' );
-			}
-			
+		} else {			
 			$this->thanks_body .= $set_body;
-			
 		}
 		
 	}
